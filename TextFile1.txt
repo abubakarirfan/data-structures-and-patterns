@@ -1,0 +1,40 @@
+#include "VignereForwardIterator.h"
+
+VigenereForwardIterator::VigenereForwardIterator(iVigenereStream& aIStream) : fIStream(aIStream)
+{
+}
+
+char VigenereForwardIterator::operator*() const
+{
+	return fCurrentChar;
+}
+
+VigenereForwardIterator& VigenereForwardIterator::operator++()
+{
+
+}
+
+VigenereForwardIterator VigenereForwardIterator::operator++(int)
+{
+
+}
+
+bool VigenereForwardIterator::operator==(const VigenereForwardIterator& aOther) const
+{
+	return ((fEOF == aOther.fEOF) && (aOther.fCurrentChar == fCurrentChar));
+}
+
+bool VigenereForwardIterator::operator!=(const VigenereForwardIterator& aOther) const
+{
+	return !(*this == aOther);
+}
+
+VigenereForwardIterator VigenereForwardIterator::begin() const
+{
+
+}
+
+VigenereForwardIterator VigenereForwardIterator::end() const
+{
+
+}
